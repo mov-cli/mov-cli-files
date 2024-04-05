@@ -14,8 +14,7 @@ from datetime import datetime
 
 __all__ = ("FilesScraper", )
 
-video_extensions = [".3g2", ".3ga", ".3gp", ".3gpp", ".aac", ".ac3", ".adt", ".adts", ".aif", ".aifc", ".aiff", ".amr", ".asf", ".asx", ".av", ".avi", ".bmp", ".cue", ".dat", ".divx", ".dv", ".dvr-ms", ".eac3", ".evo", ".f4v", ".flac", ".flc", ".fli", ".flv", ".gif", ".gsm", ".ifo", ".ismv", ".ivf", ".m1v", ".m2p", ".m2t", ".m2ts", ".m2v", ".m3u", ".m4a", ".m4b", ".m4p", ".m4v", ".mk3d", ".mkv", ".mod", ".mov", ".mp2", ".mp2v", ".mp3", ".mp4", ".mp4v", ".mpe", ".mpeg", ".mpeg1", ".mpeg2", ".mpeg4", ".mpg", ".mpg2", ".mpv", ".mts", ".mxf", ".nsv", ".nuv", ".oga", ".ogg", ".ogm", ".ogv", ".ogx", ".oma", ".opus", ".pva", ".qt", ".ra", ".ram", ".rm", ".rmvb", ".s3m", ".sdp", ".spx", ".thd", ".tivo", ".tod", ".tp", ".ts", ".tta", ".vob", ".voc", ".vqf", ".w64", ".wav", ".webm", ".wma", ".wmv", ".wv", ".xesc", ".xspf"]
-
+media_formats_playable_by_mpv = ["3g2", "3ga", "3gp", "3gpp", "aac", "ac3", "adt", "adts", "aif", "aifc", "aiff", "amr", "asf", "asx", "av", "avi", "bmp", "cue", "dat", "divx", "dv", "dvr-ms", "eac3", "evo", "f4v", "flac", "flc", "fli", "flv", "gif", "gsm", "ifo", "ismv", "ivf", "m1v", "m2p", "m2t", "m2ts", "m2v", "m3u", "m4a", "m4b", "m4p", "m4v", "mk3d", "mkv", "mod", "mov", "mp2", "mp2v", "mp3", "mp4", "mp4v", "mpe", "mpeg", "mpeg1", "mpeg2", "mpeg4", "mpg", "mpg2", "mpv", "mts", "mxf", "nsv", "nuv", "oga", "ogg", "ogm", "ogv", "ogx", "oma", "opus", "pva", "qt", "ra", "ram", "rm", "rmvb", "s3m", "sdp", "spx", "thd", "tivo", "tod", "tp", "ts", "tta", "vob", "voc", "vqf", "w64", "wav", "webm", "wma", "wmv", "wv", "xesc", "xspf"]
 class FilesScraper(Scraper):
     def __init__(self, config: Config, http_client: HTTPClient) -> None:
         self.base_url = None
