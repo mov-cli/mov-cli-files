@@ -1,5 +1,5 @@
 [project]
-name = "mov-cli-boilerplate"
+name = "mov-cli-files"
 description = "A mov-cli v4 plugin for watching whatever you desire"
 authors = [
     {name = "Ananas", email = "ananas@r3tr0ananas.lol"}
@@ -25,7 +25,7 @@ dependencies = [
     "requests",
     "importlib-metadata; python_version<'3.8'",
 
-    "mov-cli>=4.0.3"
+    "mov-cli"
 ]
 
 dynamic = ["version"]
@@ -37,15 +37,15 @@ dev = [
 ]
 
 [project.urls]
-GitHub = "https://github.com/mov-cli/mov-cli-boilerplate"
-BugTracker = "https://github.com/mov-cli/mov-cli-boilerplate/issues"
+GitHub = "https://github.com/mov-cli/mov-cli-files"
+BugTracker = "https://github.com/mov-cli/mov-cli-files/issues"
 
 [tool.setuptools.dynamic]
-version = { attr = "mov_cli_boilerplate.__version__" }
+version = { attr = "mov_cli_files.__version__" }
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["mov_cli_boilerplate*"]
+include = ["mov_cli_files*"]

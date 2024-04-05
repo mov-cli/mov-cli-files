@@ -1,15 +1,28 @@
 <div align="center">
 
-  # mov-cli-boilerplate 
-  <sub>A Boilerplate for creating mov-cli v4 plugins</sub>
+  # mov-cli-files 
+  <sub>A mov-cli v4 plugin for watching files on your device.</sub>
 
 </div>
 
-## Installation
+
+## Installation 🛠️
 Here's how to install and add the plugin to mov-cli.
 
-1. Clone the repo.
+1. Install the pip package.
+```sh
+pip install mov-cli-files
 ```
-git clone https://github.com/mov-cli/mov-cli-boilerplate.git
+2. Then add the plugin to your mov-cli config.
+```sh
+mov-cli -e
 ```
-2. Have fun. 😊
+```toml
+[mov-cli.plugins]
+files = "mov-cli-files"
+```
+
+## Usage 🖱️
+```sh
+mov-cli -s files PATH
+```
