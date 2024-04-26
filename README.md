@@ -39,3 +39,9 @@ If you would like to quickly search in a path that is not scanned by the plugin 
 ```sh
 mov-cli -s files osaka oh my gah -- --path ./Downloads
 ```
+
+### Give me EVERYTHING ✴️
+If you would like to search for everything use the star chatacter (``*``) instead of entering a query like so:
+```sh
+mov-cli -s files "*"
+```
