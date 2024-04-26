@@ -7,7 +7,6 @@
 
 </div>
 
-
 ## Installation 🛠️
 Here's how to install and add the plugin to mov-cli.
 
@@ -26,5 +25,17 @@ files = "mov-cli-files"
 
 ## Usage 🖱️
 ```sh
-mov-cli -s files PATH
+mov-cli -s files {query}
+```
+
+### Example 🌟
+Let's say I want to play an mp4 file in my Videos folder named "osaka_america_ya.mp4", this is the command you can use:
+```sh
+mov-cli -s files america ya
+```
+
+### Search in literal path 🔎
+If you would like to quickly search in a path that is not scanned by the plugin use the ``path`` scraper option like so:
+```sh
+mov-cli -s files osaka oh my gah -- --path ./Downloads
 ```
