@@ -17,6 +17,7 @@ from thefuzz import fuzz
 from datetime import datetime
 
 from .paths import get_user_media_paths
+from pathlib import Path
 
 __all__ = ("FilesScraper",)
 
@@ -28,13 +29,20 @@ class FilesScraper(Scraper):
         super().__init__(config, http_client, options)
 
     def search(self, query: str, _: int = 20) -> Generator[Metadata, Any, None]:
+        options_path = self.options.get("path", None)
         media_paths = get_user_media_paths(self.platform)
+
+        if options_path is not None:
+            options_path = Path(options_path)
+
+            if options_path.exists():
+                media_paths = [options_path]
 
         for media_path in media_paths:
             paths = media_path.glob("**/*")
 
             for path in paths:
-                if fuzz.token_set_ratio(path.name, query) < 30:
+                if fuzz.token_set_ratio(path.name, query) < 30 and query != "*":
                     continue
 
                 if path.suffix not in video_extensions:
