@@ -4,14 +4,13 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from mov_cli.plugins import PluginHookData
 
-from .files import FilesScraper
+from .scraper import FilesScraper
 
 plugin: PluginHookData = {
     "version": 1, 
     "scrapers": {
-        "DEFAULT": FilesScraper, 
-        "boilerplate": FilesScraper,
+        "DEFAULT": FilesScraper
     }
 }
 
-__version__ = "1.0.3"
+__version__ = "1.1.0"
