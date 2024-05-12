@@ -22,11 +22,8 @@ classifiers = [
     "Programming Language :: Python :: 3.12"
 ]
 dependencies = [
-    "requests",
-    "importlib-metadata; python_version<'3.8'",
-
-    "mov-cli>=4.3.0",
-    "thefuzz"
+    "thefuzz",
+    "mov-cli>=4.3.14"
 ]
 
 dynamic = ["version"]
