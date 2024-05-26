@@ -57,7 +57,7 @@ class FilesScraper(Scraper):
                 yield Metadata(
                     id = str(path), 
                     title = path.stem, 
-                    type = MetadataType.MOVIE, 
+                    type = MetadataType.SINGLE, 
                     year = year
                 )
 
