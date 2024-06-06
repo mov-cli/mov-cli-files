@@ -10,10 +10,17 @@
 ## Installation 🛠️
 Here's how to install and add the plugin to mov-cli.
 
-1. Install the pip package.
+1. Install the package.
+### PIP
 ```sh
 pip install mov-cli-files
 ```
+
+### AUR
+```
+yay -S python-mov-cli-files
+```
+
 2. Then add the plugin to your mov-cli config.
 ```sh
 mov-cli -e
