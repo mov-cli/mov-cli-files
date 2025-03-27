@@ -9,7 +9,8 @@ from .scraper import FilesScraper
 plugin: PluginHookData = {
     "version": 1, 
     "scrapers": {
-        "DEFAULT": FilesScraper
+        "DEFAULT": FilesScraper,
+        "files": FilesScraper,
     }
 }
 
